@@ -8,6 +8,9 @@
 </head>
 <body>
 
+    
+    <canvas id="canvas"></canvas>
+
     <h2>Anotação de tags</h2>
 
     <b>Negrito</b> <br><br>
@@ -18,6 +21,7 @@
     <sub>Texto a Baixo</sub> <br><br>
     
     <h2>Tabelas</h2>
+    <!--TABELAS-->
 
     <table>
         <tr>
@@ -30,15 +34,72 @@
             <td>Linha 3 Coluna 1</td><td>Linha 3 Coluna 2</td>
         </tr>
     </table>
+    <br><br>
 
-    <table>
-        <tr>1</tr><!--LINHA-->
-        <tr>2</tr><!--LINHA-->
-        <tr>3</tr><!--LINHA-->
-        <tr>4</tr><!--LINHA-->
-        <tr>5</tr><!--LINHA-->
-        <tr>6</tr><!--LINHA-->
+    <table border="1">
+        <tr><th></th><td>1999</td><td>2000</td><td>2001</td><td>2002</td><td>2003</td></tr><!--LINHA-->
+        <tr><th>Salario</th><td>1.200.000</td><td>1.500.000</td><td>1.000.000</td><td>1.500.000</td><td>1.300.000</td></tr><!--LINHA-->
+        <tr><th>Marketing</th><td>300.000</td><td>350.000</td><td>200.000</td><td>400.000</td><td>200.000</td></tr><!--LINHA-->
+        <tr><th>Pesquisa</th><td>500.000</td><td>300.000</td><td>140.000</td><td>220.000</td><td>150.000</td></tr><!--LINHA-->
+        <tr><th>Total</th><td>2.000.000</td><td>2.150.000</td><td>1.340.000</td><td>2.120.000</td><td>1.650.000</td></tr><!--LINHA-->
     </table>
+    <br><br>
+    <!--fORMULARIOS-->
+    <h3>Simple input</h3>
+    <form>
+        Nome:<input type="text" name="nome">
+        Sobrenome:<input type="text" name="sobrenome"><br>
+        Senha:<input type="password" name="senha"><br><br>
+    </form>
 
+    <h3>Textarea</h3>
+    <form>
+        <textarea name="caixa_de_texto" id="id_texto" cols="60" rows="10">
+            Digite aqui o seu texto:  
+        </textarea>
+    </form>
+
+    <h3>Radio-Button</h3>
+    <form>
+        <input type="radio" name="drink" value="exp">Expresso <br>
+        <input type="radio" name="drink" value="cap">Capuccino <br>
+        <input type="radio" name="drink" value="pin">Pingado <br>
+
+    </form>
+
+    <br>
+    <h3>Checkbox</h3>
+    <form>
+        <input type="checkbox" name="carro" value="Ferrari">Ferrari
+        <input type="checkbox" name="carro" value="Fusca">Fusca
+        <input type="checkbox" name="carro" value="Combi">Combi
+        <input type="checkbox" name="carro" value="Mercedes">Mercedes
+    </form>
+
+    <h3>Select</h3>
+    <form>
+        <select name="cidade" id="">
+            <option value="clean"> </option>
+            <option value="Resende">Resende</option>
+            <option value="Piraí">Piraí</option>
+            <option value="Porciúncula">Porciúncula</option>
+            <option value="Niterói">Niterói</option>
+            <option value="Nilópolis">Nilópolis</option>
+            <option value="Japeri">Japeri</option>
+            <option value="Guapimirim">Guapimirim</option>
+        </select>
+    </form>
+    <br>
+    <!--Botão-->
+    <br>
+    <input type="submit" value="enviar">
+
+    <!--TESTANDO CANVAS-->
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#c8431f';
+        ctx.fillRect(10, 10, 100, 100);
+    </script>
 </body>
 </html>
